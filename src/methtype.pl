@@ -62,7 +62,7 @@ while(my $line = <INFILE>){
     next if $line=~/^\s+$/;
 	my ($chr,$target_start,$target_end,$id) = split(/\s+/, $line);
 	my $len=$target_end-$target_start;
-    warn "warning: $chr:$target_start-$target_end is longer than $bin_size bp, please contact Shihcheng.Guo\@gmail.com\n" if $len > 10000;
+    warn "warning: $chr:$target_start-$target_end is longer than $bin_size bp, please contact Shihcheng.Guo\@gmail.com\n\n" if $len > 10000;
 	my $index = int($target_start/$bin_size);
 	# Debug(20161201) print "index :$index\n";
 	my $target_id = "$chr:$target_start-$target_end";
