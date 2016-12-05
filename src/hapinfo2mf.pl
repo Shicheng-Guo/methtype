@@ -14,6 +14,7 @@ my ($id,$haptype,$num,$pos)=split /\s+/;
 my ($chr,undef,undef)=split/[:-]/,$id;
 my @haptype=split//,$haptype;
 my @pos=split/,/,$pos;
+
 # Accumulate
 foreach my $i(0..$#pos){
 my $key="$chr:$pos[$i]";
@@ -29,6 +30,8 @@ foreach my $key(sort keys %key){
         $mf{$key}{"C"}=0 if ! defined $mf{$key}{"C"};
         my $nme=$mf{$key}{"T"};
         my $me=$mf{$key}{"C"};
+        $me=0 if ! defined $mf{$key}{"C"};
+        $nme=0 if ! defined $mf{$key}{"T"};
         my $sum=$me+$nme;
         my $ml=sprintf("%.3f",$me/($sum+1));
         print "$chr\t$start\t$end\t$ml\t$me\t$sum\n";
