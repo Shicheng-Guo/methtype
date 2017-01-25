@@ -1,2 +1,2 @@
-# methylation haplotype
+# methylation haplotype entropy
 
