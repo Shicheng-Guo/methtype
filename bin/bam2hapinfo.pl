@@ -163,8 +163,9 @@ foreach my $target_id (sort keys(%targetTable)){
 		$read_start_pos_table{$read_id} = $read_start if(!$read_start_pos_table{$read_id} || $read_start_pos_table{$read_id}<$read_start);
 	}		
 	
-	# Use read start and read end as the UMI to collapse multiple clonal reads.
+	# Use read start and read end as the UMI to collapse multiple clonal reads (abolished since bismark alrady removed pcr depulication after alignement)
 	# How to define UMI will influence the result compared with classic methylation level(bismark)
+        
 	my @read_list = keys(%readHapInfo);		
 	my %unique_read_base_info;
 	foreach my $read_id (@read_list){		
