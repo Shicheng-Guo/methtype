@@ -123,27 +123,3 @@ methentropy(hapinfo)
 ppoly(hapinfo)
 mhl(hapinfo)
 
-
-library("genetics")
-#install.packages("genetics")
-# Figuure 2F
-hapinfo<-c(rep("CCCC",1),rep("TTTT",9),rep("CTC",10))
-mf(hapinfo)
-mhl(hapinfo)
-hapinfo<-c(rep("CCCC",1),rep("TTTT",99))
-MHL<-mhl(hap_comb(unique(hapinfo)))
-hapinfo<-c(rep("CCCC",1),rep("TTTT",999))
-MHL<-mhl(hap_comb(unique(hapinfo)))
-# Figuure 2H
-hapinfo<-c(rep("CCCC",1),rep("TTTT",9))
-MHL<-mhl(hap_comb((hapinfo)))
-MHL
-hapinfo<-c(rep("CCCC",1),rep("TTTT",99))
-MHL<-mhl(hap_comb((hapinfo)))
-MHL
-hapinfo<-c(rep("CCCC",1),rep("TTTT",999))
-MHL<-mf(hap_comb((hapinfo)))
-MHL
-hapinfo<-c(rep("CTCT",1),rep("TCTC",1),rep("TTTT",999))
-MHL<-mhl(hap_comb((hapinfo)))
-MHL
