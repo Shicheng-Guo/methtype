@@ -23,7 +23,7 @@ my %cpg;
 # my $output="output.txt";
 
 open F,$bed;
-my $window=1;
+my $window=50;
 my %hash;
 my %HapinfoRegion;
 my %Hapinfocov;
