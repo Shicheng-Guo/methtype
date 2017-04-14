@@ -24,7 +24,7 @@ foreach my $hapInfo_file(sort @hapInfo_files){
 	push(@sample_list, $sample_name);
 	open(INFILE, "$hapInfo_file") || die("Error in opening $hapInfo_file!");
 	while(my $line = <INFILE>){
-		chop($line);
+		chomp($line);
 		my @fields = split(/\s+/, $line);
 		next if(scalar(@fields)<4);
 		my $probeID = $fields[0];
