@@ -1,0 +1,5 @@
+Indx01	Indx01.sortc.bam.hapInfo.txt.head
+Indx02	Indx02.sortc.bam.hapInfo.txt.head
+Indx03	Indx03.sortc.bam.hapInfo.txt.head
+Indx04	Indx04.sortc.bam.hapInfo.txt.head
+Indx05	Indx05.sortc.bam.hapInfo.txt.head
