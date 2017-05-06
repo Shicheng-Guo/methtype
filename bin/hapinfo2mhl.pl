@@ -80,10 +80,10 @@ foreach my $hapInfo_file(@hapInfo_files){
 				}
 				if(scalar(@pos)==1){
 				$HapString=substr($hapString,$pos[0],1);
-				$hap_count_matrix{$bed}->{$sample_name}->{$HapString}=$fields[2];
+				$hap_count_matrix{$bed}->{$sample_name}->{$HapString}+=$fields[2];
 				}elsif(scalar(@pos)>1){
 				$HapString=substr($hapString,$pos[0],scalar(@pos));
-				$hap_count_matrix{$bed}->{$sample_name}->{$HapString}=$fields[2];
+				$hap_count_matrix{$bed}->{$sample_name}->{$HapString}+=$fields[2];
 				}
 				# my $len=scalar(@pos);        # debug
 				# print "$len::$HapString\t";  # debug
