@@ -1,12 +1,11 @@
+## MHL Analysis compared with Average Methylation Level(AMF)
 
+```
 As the following haplotype:
-
 AMF=0.1724;
-
 MHL=0.6572;
-
 MHL/AMF=3.8121
-
+```
 ```
 chr10:105036700-105036729       TT      1       105036700,105036706
 chr10:105036700-105036729       CCCC    1       105036700,105036706,105036726,105036729
