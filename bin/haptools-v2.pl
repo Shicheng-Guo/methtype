@@ -7,7 +7,6 @@ use Getopt::Long;
 use File::Basename;
 use IO::Handle;
 $|++;
-# 2017-05-08
 
 my $haptools="v0.16.3_dev";
 my ($input,$output,$bed,$help)=commandopt();
@@ -43,7 +42,7 @@ close F;
 
 # step 2. pop haptype into memory
 open F1,$input || die "cannot open $input\n";
-print "\nStart to reading haplotype files....\n";
+print "\n===========================================\nStart to reading $input haplotype files....\n";
 my($filename, $dirs, $suffix) = fileparse($input);
 while(<F1>){
 chomp;
@@ -107,7 +106,7 @@ if(exists $hash{$chr}{$bin}){
 }
 }
 close F1;
-print "Haplotype information: $input loading completed, caculating is on the way!";
+print "Haplotype information loading completed, caculating is on the way!\n";
 open OUT1,">$output.hap";
 print OUT1 "Postion\tMF\tMHL\tCCT\tHom\tNCC\tNTT\tNCT\tCOV\n";
 my $MF=&hapinfo2mf(\%hapCountMmatrix);
@@ -123,7 +122,7 @@ foreach my $bed(sort keys %{$MHL}){
 	print OUT1 "\n"
 }
 close OUT1;
-
+print "$input haplotype based analysis completed!\n===========================================\n";
 # Step 3. Summary and Calculations(MHL,CCP,CNT)
 sub hapinfo2mf(\%){
 	# $hapCountMmatrix{$bed}->{$cpgPos}->{$hapString}
